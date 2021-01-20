@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import path from 'path';
+import PropTypes from 'prop-types';
 
 import css from './style.css';
 
-function PlaintextEditor({ file, write }) {
+function MarkdownEditor({ file, write }) {
   const [value, setValue] = useState('');
 
   useEffect(() => {
@@ -20,19 +20,19 @@ function PlaintextEditor({ file, write }) {
   return (
     <div className={css.editor}>
       <div className={css.title}>{path.basename(file.name)}</div>
-      <textarea  
+      <textarea
         type="textarea" 
         defaultValue={value} 
         onChange={e => handleChange(e.target.value)}>
-      </textarea >
+      </textarea>
       <button onClick={() => write(file, value)}>Save Change</button>
     </div>
   );
 }
 
-PlaintextEditor.propTypes = {
+MarkdownEditor.propTypes = {
   file: PropTypes.object,
   write: PropTypes.func
 };
 
-export default PlaintextEditor;
+export default MarkdownEditor;

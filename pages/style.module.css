@@ -81,6 +81,27 @@ body {
   color: var(--color-active);
 }
 
+.page input {
+  border-radius: 10px;
+  border-color: #000080;
+  padding: 10px;
+}
+
+.page aside button {
+  border-radius: 10px;
+  border-color: #000080;
+  padding: 10px;
+  width: 50%;
+}
+
+.page aside .shareLink {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  border-color: #000080;
+  padding: 10px;
+}
+
+
 /* Files Table */
 .files {
   width: 540px;
@@ -90,6 +111,13 @@ body {
 .files table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.files td button {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
 }
 
 .files th {
