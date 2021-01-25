@@ -223,3 +223,14 @@ body {
     monospace;
   padding: 20px;
 }
+
+.preview .toolbar {
+  background-color: #b7c2d1;
+  height: auto;
+}
+
+.preview .iconButton {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}

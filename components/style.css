@@ -1,0 +1,60 @@
+.editor {
+  width: 640px;
+  background-color: var(--color-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.editor .title {
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark-mute);
+  padding: 0 20px;
+  line-height: 40px;
+  background-color: var(--color-background);
+}
+
+.editor .toolbar {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #d0d8e4;
+}
+
+.editor .iconButton {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.editor .content {
+  width: 550px;
+  height: 400px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.16);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+
+textarea {
+  width: 550px;
+  height: 400px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.16);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+
+button {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}

@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import path from 'path';
 import PropTypes from 'prop-types';
 
-import css from './style.css';
+import css from '../style.css';
+import { Toolbar , IconButton } from '@material-ui/core'
+import CloseIcon from '@material-ui/icons/Close';
+import SaveIcon from '@material-ui/icons/Save';
 
-function MarkdownEditor({ file, write }) {
-  const [value, setValue] = useState('');
+function MarkdownEditor({ file, write, setEdit }) {
+  const [value, setValue] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -20,12 +23,14 @@ function MarkdownEditor({ file, write }) {
   return (
     <div className={css.editor}>
       <div className={css.title}>{path.basename(file.name)}</div>
+      <Toolbar className={css.toolbar} variant="dense">      
+        <IconButton onClick={() => write(file, value)} className={css.iconButton}><SaveIcon /></IconButton>
+        <IconButton onClick={() => setEdit(false)}><CloseIcon/></IconButton>
+      </Toolbar>
       <textarea
-        type="textarea" 
-        defaultValue={value} 
+        value={value} 
         onChange={e => handleChange(e.target.value)}>
       </textarea>
-      <button onClick={() => write(file, value)}>Save Change</button>
     </div>
   );
 }
